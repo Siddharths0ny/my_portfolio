@@ -3,6 +3,8 @@
 // All content is centralized here for easy updates
 // ============================================
 
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const personalInfo = {
   name: "Siddharth Sony",
   firstName: "Siddharth",
@@ -13,8 +15,8 @@ export const personalInfo = {
   location: "Greater Noida, UP, India",
   github: "https://github.com/Siddharths0ny",
   linkedin: "https://www.linkedin.com/in/siddharth-soni-2ab8b4235/",
-  resumeUrl: "/resume.pdf",
-  profileImage: "/profile.png",
+  resumeUrl: assetUrl("resume.pdf"),
+  profileImage: assetUrl("profile.png"),
 };
 
 export const roles = [
