@@ -193,7 +193,7 @@ export default function Hero() {
                 }`}
               >
                 <FiDownload size={16} />
-                Download CV
+                Download Resume
               </a>
             </motion.div>
 
