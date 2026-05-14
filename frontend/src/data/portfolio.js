@@ -144,26 +144,54 @@ export const education = [
   },
   {
     degree: "Intermediate Education — PCM",
-    institution: "Savitri Vidya Vihar Intermediate College, Basti",
+    institution: "Savitri Vidya Vihar Intermediate School, Basti, UP",
     period: "2020",
+    current: false,
+  },
+  {
+    degree: "High School Education",
+    institution: "Shri Ram Public School, Basti, UP",
+    period: "2018",
     current: false,
   },
 ];
 
 export const certifications = [
+
   {
-    title: "IIT Kanpur C++ Training",
-    issuer: "IIT Kanpur",
+    id: "cert-4",
+    title: "IIT Kanpur Data Science (AI/ML) Training",
+    issuer: "E & ICT Academy, IIT Kanpur",
+    date: "Dec 2025",
+    image: assetUrl("certs/iitk-ds-ai-ml.png"),
+    link: "#",
     icon: "cert",
   },
   {
-    title: "Google Cloud Study Jam",
-    issuer: "Google Cloud",
+    id: "cert-5",
+    title: "IIT Kanpur Data Structures and Algorithms Training",
+    issuer: "E & ICT Academy, IIT Kanpur",
+    date: "Aug 2025",
+    image: assetUrl("certs/iitk-dsa.png"),
+    link: "#",
+    icon: "cert",
+  },
+  {
+    id: "cert-3",
+    title: "AWS Cloud Skills Training",
+    issuer: "Amazon Web Services",
+    date: "Jan 2024",
+    image: assetUrl("certs/aws-training.png"),
+    link: "#",
     icon: "cloud",
   },
   {
-    title: "AWS Cloud Skills Training",
-    issuer: "Amazon Web Services",
+    id: "cert-2",
+    title: "Google Cloud Study Jam",
+    issuer: "Google Cloud",
+    date: "Nov 2023",
+    image: assetUrl("certs/gcp-jam.png"),
+    link: "#",
     icon: "cloud",
   },
 ];
@@ -174,5 +202,6 @@ export const navLinks = [
   { name: "Skills", to: "skills" },
   { name: "Projects", to: "projects" },
   { name: "Experience", to: "experience" },
+  { name: "Certifications", to: "certifications" },
   { name: "Contact", to: "contact" },
 ];

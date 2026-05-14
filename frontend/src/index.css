@@ -58,7 +58,7 @@
 /* --- Utility Classes --- */
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full mx-auto px-6 sm:px-12 lg:px-20 xl:px-32;
   }
 
   .section-padding {

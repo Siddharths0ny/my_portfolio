@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FiAward, FiUsers, FiBookOpen, FiMapPin, FiCalendar } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
-import { experience, education, certifications } from '../data/portfolio';
+import { experience, education } from '../data/portfolio';
 
 // Timeline node component
 function TimelineItem({ item, index, theme, isLast }) {
@@ -122,46 +122,7 @@ function EducationCard({ edu, index, theme }) {
   );
 }
 
-function CertCard({ cert, index, theme }) {
-  const iconMap = {
-    cert: FiAward,
-    cloud: FiBookOpen,
-  };
-  const Icon = iconMap[cert.icon] || FiAward;
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.08 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -4 }}
-      className={`group p-5 rounded-xl transition-all duration-300 ${
-        theme === 'dark'
-          ? 'bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-primary-500/20'
-          : 'bg-white border border-gray-200 hover:border-primary-300 hover:shadow-lg'
-      }`}
-    >
-      <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${
-        theme === 'dark'
-          ? 'bg-primary-500/10'
-          : 'bg-primary-50'
-      }`}>
-        <Icon className="w-5 h-5 text-primary-400 group-hover:scale-110 transition-transform" />
-      </div>
-      <h4 className={`text-sm font-heading font-bold mb-1 ${
-        theme === 'dark' ? 'text-white' : 'text-gray-900'
-      }`}>
-        {cert.title}
-      </h4>
-      <p className={`text-xs ${
-        theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
-      }`}>
-        {cert.issuer}
-      </p>
-    </motion.div>
-  );
-}
 
 export default function Experience() {
   const { theme } = useTheme();
@@ -229,21 +190,6 @@ export default function Experience() {
               <div className="space-y-3">
                 {education.map((edu, i) => (
                   <EducationCard key={i} edu={edu} index={i} theme={theme} />
-                ))}
-              </div>
-            </div>
-
-            {/* Certifications */}
-            <div>
-              <h3 className={`text-lg font-heading font-bold mb-6 flex items-center gap-2 ${
-                theme === 'dark' ? 'text-gray-200' : 'text-gray-800'
-              }`}>
-                <FiAward className="text-primary-400" size={18} />
-                Certifications
-              </h3>
-              <div className="space-y-3">
-                {certifications.map((cert, i) => (
-                  <CertCard key={i} cert={cert} index={i} theme={theme} />
                 ))}
               </div>
             </div>
