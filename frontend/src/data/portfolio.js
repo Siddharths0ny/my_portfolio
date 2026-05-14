@@ -159,6 +159,15 @@ export const education = [
 export const certifications = [
 
   {
+    id: "cert-6",
+    title: "Advanced Python",
+    issuer: "Simplilearn",
+    date: "May 2026",
+    image: assetUrl("certs/simplilearn-python.png"),
+    link: "#",
+    icon: "cert",
+  },
+  {
     id: "cert-4",
     title: "IIT Kanpur Data Science (AI/ML) Training",
     issuer: "E & ICT Academy, IIT Kanpur",
